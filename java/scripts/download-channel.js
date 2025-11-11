@@ -55,17 +55,17 @@ const {
 } = require("../utils/input-helper");
 
 // BALANCED CONFIGURATIONS FOR STABLE 25-30 MBPS
-const MAX_PARALLEL_DOWNLOADS_CONFIG = 16; // Reduced for stability
-const MAX_PARALLEL_UPLOADS_CONFIG = 16; // Reduced for stability
+const MAX_PARALLEL_DOWNLOADS_CONFIG = 32; // Reduced for stability
+const MAX_PARALLEL_UPLOADS_CONFIG = 32; // Reduced for stability
 const MESSAGE_LIMIT_CONFIG = 50; // Reduced to 50 as requested
 const RATE_LIMIT_DELAY_CONFIG = 1000; // Increased delay to prevent disconnections
 const DOWNLOAD_DELAY_CONFIG = 1000; // Increased delay for stability
 const UPLOAD_DELAY_CONFIG = 1000; // Increased delay for stability
-const CHUNK_SIZE_CONFIG = 16 * 1024 * 1024; // Reduced to 16MB for stability
+const CHUNK_SIZE_CONFIG = 32 * 1024 * 1024; // Reduced to 16MB for stability
 
 // STABLE CONFIGURATIONS
-const BATCH_SIZE = 2; // Reduced to 2 messages per batch as requested
-const CONNECTION_POOL_SIZE = 8; // Reduced for stability
+const BATCH_SIZE = 4; // Reduced to 2 messages per batch as requested
+const CONNECTION_POOL_SIZE = 16; // Reduced for stability
 const SPEED_STABILIZATION_DELAY = 50; // Ultra-minimal stabilization delay
 const THROUGHPUT_OPTIMIZATION_MODE = true;
 const AGGRESSIVE_SPEED_MODE = true; // Enabled for maximum speed
